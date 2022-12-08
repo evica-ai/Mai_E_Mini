@@ -1,0 +1,26 @@
+{
+    "Cooper": {
+        "name": "Mini Cooper",
+        "id": "cooper",
+        "biopic": "cooper.png",
+        "bio": "The MINI Cooper is about one foot wider and two feet longer (12'1.6) than the Austin and Morris Mini. The same width as the Cooper, the Clubman offers a bit more cargo space with its 12'11 length."
+    },
+    "CooperS": {
+        "name": "Cooper S",
+        "id": "cooperS",
+        "biopic": "cooper_s.png",
+        "bio": "The MINI Cooper is equipped with a 1.5 L TwinPower Turbocharged 3-cylinder making 134 horsepower, while the MINI Cooper S includes a 2.0 L TwinPower Turbo 4-cylinder engine making 189 horsepower. If fun driving is necessary to you then the additional 55hp offered by the MINI Cooper S is going to be a must-have."
+    },
+    "John": {
+        "name": "John Cooper Works",
+        "id": "john",
+        "biopic": "john_cooper.png",
+        "bio": "Relative to the standard Mini Cooper, the JCW brings features such as Brembo brakes, a more aggressive suspension, and an electronically locking front differential. All this combines to help it deliver precise handling that's a treat for enthusiasts."
+    },
+    "CooperSE": {
+        "name":"Cooper SE 3 Door",
+        "id":"cooperse",
+        "biopic":"cooper_se_3.png",
+        "bio": "The Mini Cooper SE is a full battery electric version of the third-generation Cooper or Hatch, as it's known in other markets, which debuted just two short years ago. The combustion guts of the cheerful two-door have been replaced with its new electrified innards."
+    }
+}
