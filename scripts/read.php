@@ -3,8 +3,8 @@
     error_reporting(E_ALL);
 
     //This is for testing purposes
-    $tbl = "tbl_marvel";
-    $col = "marvel_id";
+    $tbl = "tbl_mini";
+    $col = "mini_id";
     $id = "1";
     getSingle($tbl);
 

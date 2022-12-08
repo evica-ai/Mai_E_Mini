@@ -1,6 +1,6 @@
-// componnets always gets imported
-import HeroThumb from './components/TheHeroThumbnail.js';
-import Lightbox from './components/TheLightboxComponent.js';
+//components always goes on the top
+import MiniThumb from './components/MiniThumbnail.js';
+import lightbox from './components/TheLightboxComponents.js';
 
 (() => {
     // create vue instance here
@@ -8,33 +8,31 @@ import Lightbox from './components/TheLightboxComponent.js';
 
     createApp({
         created() {
-            // fetch calls always go here -> retreive any data you need
-            // fetch('./includes/index.php')
-            fetch('./data.json') //go and get the remote data
-                .then(res => res.json()) //convert the json object to plain JS  object
-                .then(data => this.heroData = data) // store the data in the Vue instance
-            .catch(error => console.error(error)); // report t=abt error that might occur 
+            //fetch calls always go here -> retreive any data you need
+            fetch('data.json') // go and get the remote data
+            .then(res => res.json())// convert the json object to plain Js object
+            .then(data => this.miniData = data) //store the data in the Vue instance
+            .catch(error => console.error(error));//report any erroes
         },
 
         data() {
             return {
-                heroData: {},
-                lightboxData: {},
-                showLightBox: false
+                miniData: {},
+                lightboxdata:{},
+                showLB: false
             }
         },
-
-        
         methods: {
-            loadLightBox(item) {
-                this.lightboxData = item;
-                this.showLightBox = true
+            loadlighbox(item) {
+                //debugger;   
+                this.lightboxdata = item;
+                this.showLB = true; 
             }
         },
 
         components: {
-            herothumbnail: HeroThumb,
-            lightbox: Lightbox
+            minithumbnail: MiniThumb,
+            lightbox: lightbox
         }
     }).mount('#app')
 })()

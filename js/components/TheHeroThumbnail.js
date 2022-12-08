@@ -1,5 +1,5 @@
 export default {
-    name: 'TheHeroThumb',
+    name: 'TheMiniThumb',
 
     props: {
         mini: Object
@@ -14,7 +14,7 @@ export default {
     `,
 
     methods: {
-        loadLightboxData() {
+        loadlightboxdata() {
             // this is a specialized view method
             this.$emit('loadlb', this.mini);
         }

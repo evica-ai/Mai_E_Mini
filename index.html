@@ -105,13 +105,16 @@
             </div>
             <div class="three-items border-top margin-tb" id="app">
                 <nav id="character-nav">
-                    <ul class="characters">
-                        <!-- hero thumb component goes here -->
-                        <herothumbnail @loadlbdata="loadLightbox" v-for="hero in heroData" :hero="hero"></herothumbnail>
-                    </ul>
-                </nav>
-                 <!-- lightbox can go here-->
-                 <lightbox @closeLB="this.showLB = false" v-if="showLB" :project="lightboxdata"></lightbox>
+                    
+           <nav id="character-nav">
+            <ul class="characters">
+                <!-- prof thumb component goes here -->
+                <minithumbnail @loadlb="loadlighbox" v-for="mini in miniData" :mini="mini"></minithumbnail>
+    
+            </ul>
+        </nav>
+               <!-- lightbox can go here-->
+               <lightbox @closeLB="this.showLB = false" v-if="showLB" :mini="lightboxdata"></lightbox>
                  <!--lighbox end-->
             </div>
         </section>  
