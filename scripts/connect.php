@@ -9,7 +9,7 @@
     // "" empty for WAMP
     $url = "localhost";
     //chnage db name for FIP this is a good to go file
-    $db = "db_marvel";
+    $db = "db_mini";
 
     //connect to db
 
