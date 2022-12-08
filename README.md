@@ -1,5 +1,5 @@
 <p>
-<img src="images/sock.svg" width="100% style="max-width:100%;">
+<img src="images/2200x840.png" width="100% style="max-width:100%;">
 </p>
 <h1 text-align="center">Mini App</h1>
 Mini is a British automotive marque founded in 1969, owned by German automotive company BMW since 2000, and used by them for a range of small cars assembled in the United Kingdom, Austria and the Netherlands.
