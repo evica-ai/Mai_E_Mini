@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sanchez&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d0e8431583.js" crossorigin="anonymous"></script>
-    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="sass/main.css" rel="stylesheet" type="text/css">
 
     <title>Welcome to The Mini Cooper</title>
 </head>
@@ -97,70 +97,22 @@
             </nav>
             <div class="hero-img grey-border-top">
                 <picture>
-                    <source media="(min-width:800px)" srcset="images/2200x840.png">
-                    <source media="(min-width:465px)" srcset="images/480x480.png">
+                    <source media="(min-width:800px)" srcset="images/2200x8402.png">
+                    <source media="(min-width:465px)" srcset="images/480x4802.png">
                     <img src="images/480x480.png" alt="FPO">
                 </picture> 
                 <h3 class="right"><span>Mini Cooper</span><br> Why Choose Us...</h3>
             </div>
-            <div class="three-items border-top margin-tb">
-                <!-- Start 1 -->
-                <div class="why-us-img">
-                    <img src="https://via.placeholder.com/244x244" alt="FPO">
-                    <div class="mobile-hide">
-                        <h4>Tracking your Purchase at Mini Cooper</h4>
-                        <p>
-                            If you've received a VIN or Production Number from your MINI Dealer, you can track the progress of your MINI in the MINI Owners' Lounge. When you first visit the Owners' Lounge, you must create a new account for yourself with your VIN or production number.<br><br>
-                            Once you've set up your account you will have full access to the MINI Production Tracking module. <br><br><a href="#">CLICK TO LEARN MORE...</a>
-                        </p>
-                    </div>
-                </div>
-                <!-- End 1 -->
-                <!-- Start 2 -->
-                <div class="why-us-img">
-                    <img src="https://via.placeholder.com/244x244" alt="FPO">
-                    <div class="hidden">
-                        <h4>Ownership</h4>
-                        <p>Copy goes here...</p>
-                    </div>
-                </div>
-                <!-- End 2 -->
-                <!-- Start 3 -->
-                <div class="why-us-img">
-                    <img src="https://via.placeholder.com/244x244" alt="FPO">
-                    <div class="hidden">
-                        <h4>Online Purchase</h4>
-                        <p>Copy goes here...</p>
-                    </div>
-                </div>
-                <!-- End 3 -->
-                <!-- Start 4 -->
-                <div class="why-us-img">
-                    <img src="https://via.placeholder.com/244x244" alt="FPO">
-                    <div class="hidden">
-                        <h4>Book a Test Drive</h4>
-                        <p>Copy goes here...</p>
-                    </div>
-                </div>
-                <!-- End 4 -->
-                <!-- Start 5 -->
-                <div class="why-us-img">
-                    <img src="https://via.placeholder.com/244x244" alt="FPO">
-                    <div class="hidden">
-                        <h4>Delivery Issues</h4>
-                        <p>Copy goes here...</p>
-                    </div>
-                </div>
-                <!-- End 5 -->
-                <!-- Start 6 -->
-                <div class="why-us-img">
-                    <img src="https://via.placeholder.com/244x244" alt="FPO">
-                    <div class="hidden">
-                        <h4>Financing Setup</h4>
-                        <p>Copy goes here...</p>
-                    </div>
-                </div>
-                <!-- End 6 -->
+            <div class="three-items border-top margin-tb" id="app">
+                <nav id="character-nav">
+                    <ul class="characters">
+                        <!-- hero thumb component goes here -->
+                        <herothumbnail @loadlbdata="loadLightbox" v-for="hero in heroData" :hero="hero"></herothumbnail>
+                    </ul>
+                </nav>
+                 <!-- lightbox can go here-->
+                 <lightbox @closeLB="this.showLB = false" v-if="showLB" :project="lightboxdata"></lightbox>
+                 <!--lighbox end-->
             </div>
         </section>  
         <section class="about-loc">
@@ -185,6 +137,7 @@
                     <p>Thank you for visiting us and getting to know about our latest line of mini cooper and mini cooper s. We're extremely excited about bringing MINIs back into racing. We have already received classification from most of the major amateur and race sanctioning bodies in the U.S., and we expect to continue our heritage of success in competitions. Of course, we also strongly encourage amateur racers to get out there and have as much fun getting involved with rallies, races and autocrossing as possible.<br><br>Your Mini Family, <span class="cr-red">The Mini Family & Team</span><br>The Mini Cooper, Ontario - Canada </p>
                 </div>
             </div>
+            <video loop autoplay><source src="https://www.youtube.com/watch?v=xHm6ZIvbG14"></viideo>
         </section>
         <section class="faq">
             <div class="one-item">
@@ -241,8 +194,8 @@
         <section class="contact">
             <div class="hero-img">
                 <picture>
-                    <source media="(min-width:800px)" srcset="images/2200x840.png">
-                    <source media="(min-width:465px)" srcset="images/480x600.png">
+                    <source media="(min-width:800px)" srcset="images/2200x8403.png">
+                    <source media="(min-width:465px)" srcset="images/480x6002.png">
                     <img src="images/480x480.png" alt="FPO">
                 </picture> 
                 <h2 class="right"><span>Mini Cooper</span><br> Contact</h2>
@@ -297,7 +250,7 @@
                 </div>
                 <nav aria-label="Footer Navigation">
                     <h3 class="hidden">Footer Nav</h3>
-                    <div class="three-items">
+                    <div class="three-items" id="footer">
                         <div>
                             <a href="#">Home</a>
                             <a href="#">Cookies & Ads</a>
@@ -319,5 +272,9 @@
                 <p>All prices and services on this website and in our reservation system are based on conditions at the time of publishing and are subject to change. Please call to confirm services, availability and pricing. ©2013 Mini Cooper Inc. All Rights Reserved. Privacy Policy </p>
             </div>
     </footer>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js" type="module" defer></script>
+    <script src="js/box.js" type="module" defer></script>
 </body>
 </html>
